@@ -41,14 +41,7 @@ module.exports = function(grunt) {
         },
         src: ['src/templates/pages/en/*.hbs'],
         dest: './web'
-      },
-      lt: {
-        options: {
-          data: ['src/templates/data/lt/*.yml']
-        },
-        src: ['src/templates/pages/lt/*.hbs'],
-        dest: './web/lt/'
-      },
+      }
     },
     watch: {
       options: {
@@ -98,13 +91,11 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('assemble:site', [
     'assemble:en',
-    'assemble:lt'
   ]);
   // Default task(s).
   grunt.registerTask('default', [
     'compass:dist',
     'assemble:en',
-    'assemble:lt'
   ]);
 
 };
