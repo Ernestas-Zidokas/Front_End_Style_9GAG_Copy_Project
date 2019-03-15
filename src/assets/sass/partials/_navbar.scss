@@ -11,9 +11,6 @@
         padding: 0 16px;
         margin: 0 auto;
         position: relative;
-        a {
-            text-decoration: none;
-        }
         &__lists {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -48,7 +45,7 @@
         display: -ms-flexbox;
         display: flex;
         &__list {
-            padding: 0 12px;
+            margin-right: 8px;
             line-height: 48px;
             font-size: 14px;
             text-align: center;
@@ -83,5 +80,8 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        &__list {
+
+        }
     }
 }
