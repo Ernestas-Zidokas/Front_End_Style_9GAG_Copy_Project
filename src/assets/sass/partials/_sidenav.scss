@@ -16,11 +16,12 @@
             color: $navbar-color;
             font-size: 14px;
             height: 36px;
-            line-height: 20px;
-            padding: 8px 0 8px 36px;
+            line-height: 36px;
             -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            display: block;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
             position: relative;
             border-radius: 2px;
             -webkit-transition: background-color .15s,padding-right .15s;
@@ -29,6 +30,9 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             padding-right: 8px;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             a {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -37,19 +41,52 @@
                 -ms-flex-align: center;
                 align-items: center;
                 text-decoration: none;
-                cursor: pointer;
             }
             span {
                 margin-left: 10px;
+                color: $navbar-color;
             }
             svg, img {
                 width: 24px;
                 height: 24px;
             }
+            &.active {
+                background-color: $sidenav-active-color;
+            }
+            .star-hover {
+                svg {
+                    fill: #fff;
+                }
+            }
+            .star {
+                fill: $sidenav-star-active-color;
+            }
         }
-        &__title {
-            padding: 12px 20px;
+        &__list:hover {
+            background-color: $sidenav-hover-color;
+            cursor: pointer;
+            .star-hover {
+                svg {
+                    fill: $sidenav-star-color;
+                }
+            }
+        }
+        &__title h3 {
+            line-height: 16px;
+            height: 16px;
+            margin-bottom: 8px;
+            color: #999;
             font-size: 12px;
+            text-transform: uppercase;
+        }
+        .sections {
+            .side-menu__lists__list {
+                &:last-child {
+                    &:hover {
+
+                    }
+                }
+            }
         }
     }
 }

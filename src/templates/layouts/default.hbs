@@ -7,11 +7,18 @@
     </head>
     <body>
         {{>navbar}}
-        {{>sidenav}}
-        {{body}}
+        <div class="container">
+            {{>sidenav}}
+            {{body}}
+        </div>
         {{#is basename 'index'}}
         {{>footer}}
         {{/is}}
         <div class="svg-sprite-container">{{> 'sprite.symbol' }}</div>
+
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../node_modules/popper.js/dist/popper.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
     </body>
 </html>
