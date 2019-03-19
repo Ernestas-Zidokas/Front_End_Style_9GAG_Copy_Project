@@ -10,7 +10,7 @@
     &::-webkit-scrollbar{
         display: none;
     }
-    padding: 20px 0 80px;
+    padding: 24px 20px 80px 0;
     &__lists {
         &__list {
             color: $navbar-color;
@@ -54,20 +54,22 @@
                 background-color: $sidenav-active-color;
             }
             .star-hover {
-                svg {
                     fill: #fff;
+            }
+            &:hover {
+                background-color: $sidenav-hover-color;
+                cursor: pointer;
+                .star-hover {
+                    fill: $sidenav-star-color;
+                }
+                .star {
+                    fill: $sidenav-star-active-color;
                 }
             }
             .star {
                 fill: $sidenav-star-active-color;
-            }
-        }
-        &__list:hover {
-            background-color: $sidenav-hover-color;
-            cursor: pointer;
-            .star-hover {
-                svg {
-                    fill: $sidenav-star-color;
+                &:hover {
+                    fill: $sidenav-star-active-color;
                 }
             }
         }
@@ -78,6 +80,11 @@
             color: #999;
             font-size: 12px;
             text-transform: uppercase;
+        }
+        &__title {
+            .title-hide {
+                display: none;
+            }
         }
         .sections {
             .side-menu__lists__list {

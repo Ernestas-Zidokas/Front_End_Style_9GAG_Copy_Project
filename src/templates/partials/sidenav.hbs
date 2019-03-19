@@ -10,6 +10,17 @@
                 </svg>
                 <span>Hot</span>
             </a>
+            {{#is custom_basename 'hot'}}
+            <a href="#">
+                <svg class="svg-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more"></use>
+                </svg>
+            </a>
+            {{else}}
+            <a href="#">
+
+            </a>
+            {{/is}}
         </li>
         <li class="side-menu__lists__list">
             <a href="#">
@@ -28,6 +39,11 @@
             </a>
         </li>
     </ul>
+    <ul id="favourite" class="side-menu__lists sections">
+        <li class="side-menu__lists__title">
+            <h3 class="title-hide">Favourite</h3>
+        </li>
+    </ul>
     <ul class="side-menu__lists sections">
         <li class="side-menu__lists__title">
             <h3>sections</h3>
@@ -37,8 +53,8 @@
                 <img src="assets/images/funny.jpg" alt="funny">
                 <span>Funny</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -48,8 +64,8 @@
                 <img src="assets/images/animals.jpg" alt="animals">
                 <span>Animals</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -59,8 +75,8 @@
                 <img src="assets/images/anime.jpg" alt="anime">
                 <span>Anime & Manga</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -70,8 +86,8 @@
                 <img src="assets/images/waifu.jpg" alt="waifu">
                 <span>Anime Waifu</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -81,8 +97,8 @@
                 <img src="assets/images/anime_wallpaper.jpg" alt="anime wallpaper">
                 <span>Anime Wallpaper</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -92,8 +108,8 @@
                 <img src="assets/images/apex.jpg" alt="apex">
                 <span>Apex Legends</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -103,8 +119,8 @@
                 <img src="assets/images/ask.jpg" alt="ask">
                 <span>Ask 9GAG</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -114,8 +130,8 @@
                 <img src="assets/images/awesome.jpg" alt="awesome">
                 <span>Awesome</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -125,8 +141,8 @@
                 <img src="assets/images/basketball.jpg" alt="basketball">
                 <span>Basketball</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -136,8 +152,8 @@
                 <img src="assets/images/car.jpg" alt="car">
                 <span>Car</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -147,8 +163,8 @@
                 <img src="assets/images/comic.jpg" alt="comic">
                 <span>Comic</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -158,8 +174,8 @@
                 <img src="assets/images/cosplay.jpg" alt="cosplay">
                 <span>Cosplay</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -169,8 +185,8 @@
                 <img src="assets/images/countryballs.jpg" alt="countryballs">
                 <span>Countryballs</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -180,8 +196,8 @@
                 <img src="assets/images/classical.jpg" alt="classical">
                 <span>Classical Art Memes</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -191,8 +207,8 @@
                 <img src="assets/images/diy.jpg" alt="diy">
                 <span>DIY & Crafts</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -202,8 +218,8 @@
                 <img src="assets/images/drawing.jpg" alt="drawing">
                 <span>Drawing & Illustration</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -213,8 +229,8 @@
                 <img src="assets/images/food.jpg" alt="food">
                 <span>Food & Drinks</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -224,8 +240,8 @@
                 <img src="assets/images/football.jpg" alt="football">
                 <span>Football</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -235,8 +251,8 @@
                 <img src="assets/images/fortnite.jpg" alt="fornite">
                 <span>Fortnite</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -246,8 +262,8 @@
                 <img src="assets/images/game_of_thrones.jpg" alt="game of thrones">
                 <span>Game of Thrones</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -257,8 +273,8 @@
                 <img src="assets/images/gaming.jpg" alt="gaming">
                 <span>Gaming</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -268,8 +284,8 @@
                 <img src="assets/images/gif.jpg" alt="gif">
                 <span>GIF</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -279,8 +295,8 @@
                 <img src="assets/images/girl.jpg" alt="girl">
                 <span>Girl</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -290,8 +306,8 @@
                 <img src="assets/images/celebrity.jpg" alt="celebrity">
                 <span>Girl Celebrity</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -301,8 +317,8 @@
                 <img src="assets/images/girly_things.jpg" alt="girly things">
                 <span>Girly Things</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -312,8 +328,8 @@
                 <img src="assets/images/guy.jpg" alt="guy">
                 <span>Guy</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -323,8 +339,8 @@
                 <img src="assets/images/history.jpg" alt="history">
                 <span>History</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -334,8 +350,8 @@
                 <img src="assets/images/horror.jpg" alt="horror">
                 <span>Horror</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -345,8 +361,8 @@
                 <img src="assets/images/home.jpg" alt="home">
                 <span>Home Design</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -356,8 +372,8 @@
                 <img src="assets/images/k-pop.jpg" alt="k-pop">
                 <span>K-Pop</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -367,8 +383,8 @@
                 <img src="assets/images/league_of_legends.jpg" alt="league of legends">
                 <span>League of Legends</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -378,8 +394,8 @@
                 <img src="assets/images/lego.jpg" alt="lego">
                 <span>Lego</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -389,8 +405,8 @@
                 <img src="assets/images/movie.jpg" alt="movie">
                 <span>Movie & TV</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -400,8 +416,8 @@
                 <img src="assets/images/music.jpg" alt="music">
                 <span>Music</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -411,8 +427,8 @@
                 <img src="assets/images/nsfw.jpg" alt="nsfw">
                 <span>NSFW</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -422,8 +438,8 @@
                 <img src="assets/images/overwatch.jpg" alt="overwatch">
                 <span>Overwatch</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -433,8 +449,8 @@
                 <img src="assets/images/pc_master_race.jpg" alt="pc master race">
                 <span>PC Master Race</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -444,8 +460,8 @@
                 <img src="assets/images/photography.jpg" alt="photography">
                 <span>Photography</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -455,8 +471,8 @@
                 <img src="assets/images/pokemon.jpg" alt="pokemon">
                 <span>Pokemon</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -466,8 +482,8 @@
                 <img src="assets/images/politics.jpg" alt="politics">
                 <span>Politics</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -477,8 +493,8 @@
                 <img src="assets/images/relationship.jpg" alt="relationship">
                 <span>Relationship</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -488,8 +504,8 @@
                 <img src="assets/images/pubg.jpg" alt="pubg">
                 <span>PUBG</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -499,8 +515,8 @@
                 <img src="assets/images/roast_me.jpg" alt="roast me">
                 <span>Roast Me</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -510,8 +526,8 @@
                 <img src="assets/images/savage.jpg" alt="savage">
                 <span>Savage</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -521,8 +537,8 @@
                 <img src="assets/images/satisfying.jpg" alt="satisfying">
                 <span>Satisfying</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -532,8 +548,8 @@
                 <img src="assets/images/school.jpg" alt="school">
                 <span>School</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -543,8 +559,8 @@
                 <img src="assets/images/sci-tech.jpg" alt="sci-tech">
                 <span>Sci-Tech</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -554,8 +570,8 @@
                 <img src="assets/images/star_wars.jpg" alt="star wars">
                 <span>Star Wars</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -565,8 +581,8 @@
                 <img src="assets/images/superhero.jpg" alt="superhero">
                 <span>Superhero</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -576,8 +592,8 @@
                 <img src="assets/images/surreal.jpg" alt="surreal">
                 <span>Surreal Memes</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -587,8 +603,8 @@
                 <img src="assets/images/sport.jpg" alt="sport">
                 <span>Sport</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -598,8 +614,8 @@
                 <img src="assets/images/travel.jpg" alt="travel">
                 <span>Travel</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -609,8 +625,8 @@
                 <img src="assets/images/timely.jpg" alt="timely">
                 <span>Timely</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -620,8 +636,8 @@
                 <img src="assets/images/video.jpg" alt="video">
                 <span>Video</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -631,8 +647,8 @@
                 <img src="assets/images/warhammer.jpg" alt="warhammer">
                 <span>Warhammer</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -642,8 +658,8 @@
                 <img src="assets/images/wallpaper.jpg" alt="wallpaper">
                 <span>Wallpaper</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -653,8 +669,8 @@
                 <img src="assets/images/wtf.jpg" alt="wtf">
                 <span>WTF</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
@@ -664,8 +680,8 @@
                 <img src="assets/images/dark.jpg" alt="dark">
                 <span>Dark Humor</span>
             </a>
-            <a class="star-hover" href="#">
-                <svg class="svg-icon">
+            <a class="" href="#">
+                <svg class="svg-icon star-hover">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </a>
