@@ -10,7 +10,7 @@
     &::-webkit-scrollbar{
         display: none;
     }
-    padding: 24px 20px 80px 0;
+    padding: 24px 0 80px 0;
     &__lists {
         &__list {
             color: $navbar-color;
@@ -52,6 +52,9 @@
             }
             &.active {
                 background-color: $sidenav-active-color;
+                .more-icon {
+                    fill: $sidenav-star-color;
+                }
             }
             .star-hover {
                     fill: #fff;

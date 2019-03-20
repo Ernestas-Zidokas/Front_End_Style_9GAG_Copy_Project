@@ -20,10 +20,8 @@ $(function() {
 
         $(this).parent().parent().attr('data-favourite', text).hide(); //paslepia visa list elementa
 
-        console.log($('[data-favourite]'));
-
-        if ($('.star-hover').hasClass('star')) {
-            $('.title-hide').removeClass('title-hide'); //parodo title jeigu yra star classe
+        if ($('#favourite').data('favourite')) {
+            $('.title-hide').removeClass('title-hide'); //parodo title jeigu yra data atributas ant id
         }
     })
 
@@ -32,6 +30,11 @@ $(function() {
 
         $(this).parent().parent().hide();
         $(`[data-favourite="${text}"]`).show();
+        $('#favourite').removeData('favourite');
+
+        if ($('#favourite').data('favourite') == false){
+            $('#favourite .side-menu__lists__title h3').addClass('title-hide');
+        }
     });
 })
 
