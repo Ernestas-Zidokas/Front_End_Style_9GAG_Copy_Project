@@ -28,11 +28,10 @@ $(function() {
     $('body').on('click', '#remove-favourite', function(){
         let text = $(this).parent().siblings().children('span').text();
 
-        $(this).parent().parent().hide();
+        $(this).parent().parent().remove();
         $(`[data-favourite="${text}"]`).show();
-        $('#favourite').removeData('favourite');
 
-        if ($('#favourite').data('favourite') == false){
+        if ($('#favourite .side-menu__lists__list').length  == 0) {
             $('#favourite .side-menu__lists__title h3').addClass('title-hide');
         }
     });
