@@ -52,6 +52,7 @@
             }
             &.active {
                 background-color: $sidenav-active-color;
+                font-weight: bold;
                 .more-icon {
                     fill: $sidenav-star-color;
                 }
