@@ -126,3 +126,22 @@ fetch(api_url)
     })
   })
   .catch((err) => console.log('ivyko erroras => ', err));
+
+  const sideContent = document.querySelector('.right-bar__lists');
+  const side_api_url = "https://rickandmortyapi.com/api/character/?page=2";
+  fetch(side_api_url)
+  .then((response) => response.json())
+  .then((result) =>{
+    result.results.forEach((item) => {
+      const side_template = `
+      <li class="right-bar__lists__list">
+        <a href="#">
+            <img src ="${item.image}">
+            <h3>${item.name}</h3>
+        </a>
+      </li>
+      `;
+      sideContent.insertAdjacentHTML('beforeend', side_template)
+    })
+  })
+  .catch((error) => console.log('ivyko erroras => ', error));

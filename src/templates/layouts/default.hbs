@@ -10,10 +10,11 @@
         <div class="container">
             {{>sidenav}}
             {{body}}
+            {{>rightbar}}
         </div>
-        {{#is basename 'index'}}
+        <!-- {{#is basename 'index'}}
         {{>footer}}
-        {{/is}}
+        {{/is}} -->
         <div class="svg-sprite-container">{{> 'sprite.symbol' }}</div>
 
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
