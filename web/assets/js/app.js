@@ -38,10 +38,11 @@ $(function() {
 })
 
 const content = document.querySelector('.middle-bar');
-const api_url = "https://rickandmortyapi.com/api/character";
+const api_url = "https://rickandmortyapi.com/api/character/";
 fetch(api_url)
   .then((response) => response.json())
   .then((result) => {
+      console.log(result);
     result.results.forEach((element) => {
       content.insertAdjacentHTML('beforeend', template(element.name, element.image))
     })
