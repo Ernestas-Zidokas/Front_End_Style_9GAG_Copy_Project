@@ -37,17 +37,33 @@ $(function() {
     });
 })
 
-const content = document.querySelector('.middle-bar');
-const api_url = "https://rickandmortyapi.com/api/character/";
-fetch(api_url)
-  .then((response) => response.json())
-  .then((result) => {
-      console.log(result);
-    result.results.forEach((element) => {
-      content.insertAdjacentHTML('beforeend', template(element.name, element.image))
-    })
-  })
-  .catch((err) => console.log('ivyko erroras => ', err));
+// const content = document.querySelector('.middle-bar');
+// const api_url = "https://rickandmortyapi.com/api/character/";
+// fetch(api_url)
+//   .then((response) => response.json())
+//   .then((result) => {
+//       console.log(result);
+//     result.results.forEach((element) => {
+//       content.insertAdjacentHTML('beforeend', template(element.name, element.image))
+//     })
+//   })
+//   .catch((err) => console.log('ivyko erroras => ', err));
+
+  $('.middle-bar').infiniteScroll({
+    // options
+    path: function() {
+        var pageNumber = ( this.loadCount + 1 );
+        return `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+    },
+    append: template(element.name, element.image),
+    history: false,
+  });
+
+  // element argument can be a selector string
+  //   for an individual element
+  var infScroll = new InfiniteScroll( '.container', {
+    // options
+  });
 
 
 
@@ -61,7 +77,7 @@ fetch(api_url)
       <li class="right-bar__lists__list">
         <a href="#">
             <img src ="${item.image}">
-            <h3>${item.name}</h3>
+            <h3>Name: ${item.name}, Status: ${item.status}, Type: ${item.type}, Species: ${item.species}, Gender: ${item.Gender}</h3>
         </a>
       </li>
       `;

@@ -64,6 +64,7 @@
         padding-top: 48px;
         &__lists {
             &__list {
+                margin-bottom: 10px;
                 img {
                     height: 158px;
                     width: 300px;
@@ -73,6 +74,10 @@
                     line-height: 20px;
                     font-weight: 400;
                     word-wrap: break-word;
+                    color: $navbar-color;
+                }
+                a {
+                    text-decoration: none;
                 }
             }
         }
