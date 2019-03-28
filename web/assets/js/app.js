@@ -59,7 +59,7 @@ fetch(side_api_url)
         <li class="right-bar__lists__list">
         <a href="#">
         <img src ="${item.image}">
-        <h3>Name: ${item.name}, Status: ${item.status}, Type: ${item.type}, Species: ${item.species}, Gender: ${item.gender}</h3>
+        <h3>Name: ${item.name}, Status: ${item.status}, Type: ${item.type}, Species: ${item.species}</h3>
         </a>
         </li>
         `;
@@ -69,58 +69,14 @@ fetch(side_api_url)
 .catch((error) => console.log('ivyko erroras => ', error));
 
 
-
-// $.fn.isOnScreen = function(){
-//     var win = $(window);
-//     var viewport = {
-//         top : win.scrollTop(),
-//         left : win.scrollLeft()
-//     };
-//     viewport.right = viewport.left + win.width();
-//     viewport.bottom = viewport.top + win.height();
-//
-//     var bounds = this.offset();
-//     bounds.right = bounds.left + this.outerWidth();
-//     bounds.bottom = bounds.top + this.outerHeight();
-//
-//     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-// };
-//
-// let pageCounter = 1;
-// let praejo = false;
-// if (praejo === false) {
-//     $(window).scroll(function() {
-//         if ($('#test').isOnScreen() == true && praejo === false) {
-//             console.log(praejo);
-//             pageCounter++;
-//             console.log(pageCounter);
-//             console.log('test is on screen');
-//
-        //     const content = document.querySelector('.middle-bar__content');
-        //     const api_url = `https://rickandmortyapi.com/api/character/?page=${pageCounter}`;
-        //     fetch(api_url)
-        //     .then((response) => response.json())
-        //     .then((result) => {
-        //         result.results.forEach((element) => {
-        //             content.insertAdjacentHTML('beforeend', template(element.name, element.image))
-        //         })
-        //     })
-        //     .catch((err) => console.log('ivyko erroras => ', err));
-        // }
-//         praejo = true;
-//
-//         setTimeout(function() {
-//             praejo = false;
-//         }, 10000)
-//
-//     });
-// }
-
+let pageCounter = 0;
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       pageCounter++;
+       console.log(pageCounter);
 
        const content = document.querySelector('.middle-bar__content');
-       const api_url = `https://rickandmortyapi.com/api/character/?page=2`;
+       const api_url = `https://rickandmortyapi.com/api/character/?page=${pageCounter}`;
        fetch(api_url)
        .then((response) => response.json())
        .then((result) => {
