@@ -179,7 +179,7 @@
                 &:hover {
                     border-color: #999;
                 }
-                a {
+                &__action {
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
@@ -232,5 +232,16 @@
 
         }
 
+    }
+}
+
+.collapse, .collapsing {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    textarea {
+        border-radius: 16px;
+        border: 1px solid rgba(0,0,0,0.05);
+        background: rgba(0,0,0,0.05);
+        padding-left: 10px;
     }
 }

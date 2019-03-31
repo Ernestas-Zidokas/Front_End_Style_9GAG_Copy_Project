@@ -26,14 +26,14 @@ function template(name, image) {
             <div class="btn-left">
                 <ul class="btn-vote">
                     <li class="btn-vote__list">
-                        <a href="#">
+                        <a class="btn-vote__list__action" href="#">
                             <svg class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="btn-vote__list">
-                        <a href="#">
+                        <a class="btn-vote__list__action" href="#">
                             <svg class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#down"></use>
                             </svg>
@@ -42,18 +42,35 @@ function template(name, image) {
                 </ul>
                 <ul class="btn-vote">
                     <li class="btn-vote__list">
-                        <a href="#">
+                        <a class="btn-vote__list__action" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <svg class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#comment"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="btn-vote__list">
-                        <a href="#">
+                        <a class="btn-vote__list__action" href="#" role="button" id="post-more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <svg class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#more"></use>
                             </svg>
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="post-more">
+                            <a class="dropdown-menu__item" href="#">
+                                <p>Google+</p>
+                            </a>
+                            <a class="dropdown-menu__item" href="#">
+                                <p>Twitter</p>
+                            </a>
+                            <a class="dropdown-menu__item" href="#">
+                                <p>Email</p>
+                            </a>
+                            <a class="dropdown-menu__item" href="#">
+                                <p>Report</p>
+                            </a>
+                            <a class="dropdown-menu__item" href="#">
+                                <p>I just don't like it</p>
+                            </a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -77,6 +94,9 @@ function template(name, image) {
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="collapse" id="collapseExample">
+            <textarea name="comment" placeholder="Write a comment..." rows="2" cols="50"></textarea>
         </div>
     </div>
     `;
