@@ -1,6 +1,7 @@
 $(function() {
 
-    $('.star-hover').on('click', function() {
+    $('.star-hover').on('click', function(event) {
+        event.preventDefault();
         let img = $(this).parent().siblings().children('img').attr('src');
         let text = $(this).parent().siblings().children('span').text();
 
@@ -17,11 +18,13 @@ $(function() {
             </a>
             </li>`
         );
+        
+        //paslepia visa list elementa
+        $(this).parent().parent().attr('data-favourite', text).hide();
 
-        $(this).parent().parent().attr('data-favourite', text).hide(); //paslepia visa list elementa
-
+        //parodo title jeigu yra data atributas ant id
         if ($('#favourite').data('favourite')) {
-            $('.title-hide').removeClass('title-hide'); //parodo title jeigu yra data atributas ant id
+            $('.title-hide').removeClass('title-hide');
         }
     })
 
@@ -35,6 +38,11 @@ $(function() {
             $('#favourite .side-menu__lists__title h3').addClass('title-hide');
         }
     });
+
+    $('.active .dropdown .dropdown-menu__item').on('click', function(event) {
+        $(this).addClass('check-arrow');
+        $(this).siblings().removeClass('check-arrow');
+    })
 })
 
 const content = document.querySelector('.middle-bar__content');

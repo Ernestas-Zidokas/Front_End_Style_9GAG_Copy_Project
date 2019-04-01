@@ -26,13 +26,34 @@
             border-radius: 2px;
             -webkit-transition: background-color .15s,padding-right .15s;
             transition: background-color .15s,padding-right .15s;
-            overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             padding-right: 8px;
             -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            .dropdown {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                .dropdown-menu {
+                    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                    &__item {
+                        position: relative;
+                        color: #000;
+                        line-height: 34px;
+                        padding: 0 16px 0 32px;
+                        font-size: 14px;
+                        text-decoration: none;
+                        font-weight: 400;
+                        &:hover {
+                            background-color: rgba(0,0,0,0.06);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
             a {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -58,7 +79,7 @@
                 }
             }
             .star-hover {
-                    fill: #fff;
+                fill: #fff;
             }
             &:hover {
                 background-color: $sidenav-hover-color;

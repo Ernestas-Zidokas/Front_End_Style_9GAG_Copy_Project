@@ -179,6 +179,22 @@
                 &:hover {
                     border-color: #999;
                 }
+                .dropdown-menu {
+                    min-width: 160px;
+                    &__item {
+                        text-decoration: none;
+                        p {
+                            color: $navbar-color;
+                            line-height: 34px;
+                            padding: 0 16px;
+                            font-size: 14px;
+                            &:hover {
+                                background-color: rgba(0,0,0,0.06);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
                 &__action {
                     display: -webkit-box;
                     display: -ms-flexbox;
