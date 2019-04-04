@@ -50,11 +50,16 @@
                         </a>
                     </li>
                     <li class="function__general__list">
-                        <a href="#">
-                            <svg class="svg-icon">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
-                            </svg>
-                        </a>
+                        <div class="dropdown">
+                            <a href="#" role="button" id="navbar-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg class="svg-icon">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+                                </svg>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbar-search">
+                                <input type="text" name="search" placeholder="Type to search...">
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <ul class="function__visitor">
@@ -64,7 +69,7 @@
                         </a>
                     </li>
                     <li class="function__visitor__list">
-                        <a class="primary-btn" href="#">
+                        <a class="primary-btn" href="#" data-toggle="modal" data-target="#signup-modal">
                             Sign up
                         </a>
                     </li>

@@ -1,0 +1,129 @@
+.social-signup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    li {
+        -webkit-box-sizing: unset;
+        box-sizing: unset;
+    }
+    &__button {
+        a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            width: 145px;
+            height: 30px;
+            line-height: 28px;
+            text-align: center;
+            padding: 15px 30px;
+            border-radius: 2px;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            .svg-icon {
+                height: 30px;
+                width: 30px;
+                fill: #fff;
+            }
+        }
+        &--facebook {
+            background-color: #4367b0;
+        }
+        &--google {
+            background-color: #2d72d9;
+        }
+    }
+}
+.modal-header {
+    display: block;
+    padding: 2rem 2rem;
+    p {
+        margin-bottom: 20px;
+        line-height: 1.6em;
+        color: #999;
+    }
+}
+.modal-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.modal-body {
+    padding: 1rem 2rem 2rem ;
+    &__title {
+        margin-bottom: 10px;
+        color: #999;
+    }
+    &__input {
+        margin: 20px 0;
+        label {
+            display: block;
+            font-weight: 700;
+        }
+        input {
+            line-height: 20px;
+            height: 40px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            display: block;
+            margin: 6px 0;
+            width: 100%;
+        }
+    }
+    &__bottom {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        button {
+            color: #fff;
+            background-color: #09f;
+            padding: 8px 16px;
+            border-radius: 2px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            -webkit-appearance: none;
+            &:hover {
+                background-color: #33adff;
+            }
+            &:active {
+                background-color: #007acc;
+            }
+        }
+        a {
+            text-decoration: none;
+            p {
+                color: #999;
+            }
+        }
+    }
+    &__alternative {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        span {
+            color: #999;
+            margin-bottom: 10px;
+            margin-right: 4px;
+        }
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            color: #09f;
+        }
+    }
+}
