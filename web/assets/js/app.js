@@ -18,7 +18,7 @@ $(function() {
             </a>
             </li>`
         );
-        
+
         //paslepia visa list elementa
         $(this).parent().parent().attr('data-favourite', text).hide();
 
@@ -42,6 +42,14 @@ $(function() {
     $('.active .dropdown .dropdown-menu__item').on('click', function(event) {
         $(this).addClass('check-arrow');
         $(this).siblings().removeClass('check-arrow');
+    })
+
+    // $('body').on('click', '#nightmode', function(){
+    //     $(this).addClass('nightmode');
+    // })
+
+    $('#nightmode').on('click', function(){
+        $('body').toggleClass('nightmode');
     })
 })
 
@@ -79,19 +87,36 @@ fetch(side_api_url)
 
 let pageCounter = 0;
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-       pageCounter++;
-       console.log(pageCounter);
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        pageCounter++;
+        console.log(pageCounter);
 
-       const content = document.querySelector('.middle-bar__content');
-       const api_url = `https://rickandmortyapi.com/api/character/?page=${pageCounter}`;
-       fetch(api_url)
-       .then((response) => response.json())
-       .then((result) => {
-           result.results.forEach((element) => {
-               content.insertAdjacentHTML('beforeend', template(element.name, element.image))
-           })
-       })
-       .catch((err) => console.log('ivyko erroras => ', err));
-   }
+        const content = document.querySelector('.middle-bar__content');
+        const api_url = `https://rickandmortyapi.com/api/character/?page=${pageCounter}`;
+        fetch(api_url)
+        .then((response) => response.json())
+        .then((result) => {
+            result.results.forEach((element) => {
+                content.insertAdjacentHTML('beforeend', template(element.name, element.image))
+            })
+        })
+        .catch((err) => console.log('ivyko erroras => ', err));
+    }
 });
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

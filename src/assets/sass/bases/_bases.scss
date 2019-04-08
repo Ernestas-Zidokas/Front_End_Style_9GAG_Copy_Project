@@ -5,13 +5,13 @@
 @import 'buttons.scss';
 
 body {
-  margin: 0;
-  font: 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,Helvetica,Geneva,sans-serif
+    margin: 0;
+    font: 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,Helvetica,Geneva,sans-serif
 }
 ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 p {
     margin: 0;
@@ -24,8 +24,113 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 0;
     padding-right: 0;
 }
-
-*, *::before, *::after {
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+.nightmode {
+    background-color: $navbar-color;
+    .side-menu {
+        background-color: $navbar-color;
+        .popular {
+            .active {
+                background-color: #333333;
+                .dropdown .dropdown-menu{
+                    background: #333333;
+                }
+                .dropdown {
+                    .dropdown-menu {
+                        background-color: #333333;
+                        &__item {
+                            &:hover {
+                                background-color: #333333;
+                            }
+                            p {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            li > {
+                a > {
+                    svg {
+                        &:not(.more-icon){
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &__lists {
+            &__list {
+                a {
+                    span {
+                        color: #fff;
+                    }
+                }
+                .svg-icon {
+                    fill: $navbar-color;
+                }
+            }
+        }
+    }
+    .middle-content {
+        .middle-bar {
+            &__featured-tag {
+                a {
+                    background-color: hsla(0,0%,100%,.2);
+                    color: #fff;
+                }
+            }
+            &__list {
+                a {
+                    h1 {
+                        color: #fff;
+                    }
+                }
+            }
+            &__content {
+                .content__middle {
+                    .post-afterbar {
+                        border-bottom: 1px solid hsla(0,0%,100%,.2);
+                    }
+                }
+            }
+        }
+        .right-bar {
+            &__lists {
+                &__list {
+                    a {
+                        h3 {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #nightmode {
+        fill: #fc0;
+    }
+    #myBtn {
+        background-color: #333;
+        border-color: hsla(0,0%,100%,.2);
+    }
+    #favourite {
+        .side-menu__lists__list {
+            a {
+                svg {
+                    fill: #fbc709;
+                }
+            }
+        }
+    }
+    .function__general__list {
+        .dropdown {
+            .dropdown-menu {
+                background-color: #333333;
+                input {
+                    caret-color: #fff;
+                    background-color: #333333;
+                }
+            }
+        }
+    }
 }

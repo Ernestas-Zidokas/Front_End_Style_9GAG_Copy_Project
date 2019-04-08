@@ -44,6 +44,10 @@
 .modal-header {
     display: block;
     padding: 2rem 2rem;
+    *, *::before, *::after {
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+    }
     p {
         margin-bottom: 20px;
         line-height: 1.6em;
