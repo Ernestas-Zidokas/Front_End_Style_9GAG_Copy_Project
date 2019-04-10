@@ -65,6 +65,9 @@
                 padding: 0 8px;
                 border-radius: 2px;
                 text-align: center;
+                &:hover {
+                    background-color: rgba(0,0,0,.1);
+                }
             }
         }
         &__content {
@@ -110,12 +113,14 @@
                     font-weight: 400;
                     word-wrap: break-word;
                     color: $navbar-color;
-                    &:hover {
-                        color: #09f
-                    }
                 }
                 a {
                     text-decoration: none;
+                }
+                &:hover {
+                    h3 {
+                        color: #09f
+                    }
                 }
             }
         }
@@ -139,6 +144,9 @@
         p {
             color: $post-text-color;
             font-size: 12px;
+            &:hover {
+                color: #666;
+            }
         }
     }
 }
@@ -151,6 +159,11 @@
     a {
         text-decoration: none;
         color: $post-text-color;
+        &:hover {
+            p {
+                color: #666;
+            }
+        }
     }
     div {
         color: $post-text-color;
@@ -218,6 +231,12 @@
                         width: 25px;
                         fill: $post-text-color;
                     }
+                    &.vote-active {
+                        background-color: rgba(0,0,0,.04);
+                        .svg-icon {
+                            fill: #0099ff;
+                        }
+                    }
                 }
             }
         }
@@ -247,9 +266,17 @@
             &--facebook {
                 background-color: #3b5998;
                 margin-right: 8px;
+                &:hover {
+                    background-color: #4c70ba;
+                    cursor: pointer;
+                }
             }
             &--pinterest {
                 background-color: #bd081c;
+                &:hover {
+                    background-color: #ee0a23;
+                    cursor: pointer;
+                }
             }
 
         }
@@ -266,6 +293,7 @@
         background: rgba(0,0,0,0.05);
         padding-left: 10px;
         width: 486px;
+        outline: none;
     }
 }
 

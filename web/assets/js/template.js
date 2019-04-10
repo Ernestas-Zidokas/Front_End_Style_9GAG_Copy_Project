@@ -15,25 +15,31 @@ function template(name, image) {
         </div>
         <div class="post-meta">
             <a href="#">
-                <p>725 points</p>
+                <p>
+                    <span data-points>725</span>
+                    <span>points</span>
+                </p>
             </a>
             <div>·</div>
             <a href="#">
-                <p>14 comments</p>
+                <p>
+                    <span id="comments">14</span>
+                    <span>comments</span>
+                </p>
             </a>
         </div>
         <div class="post-afterbar">
             <div class="btn-left">
                 <ul class="btn-vote">
                     <li class="btn-vote__list">
-                        <a class="btn-vote__list__action" href="#">
+                        <a data-upvote class="btn-vote__list__action" href="#">
                             <svg class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="btn-vote__list">
-                        <a class="btn-vote__list__action" href="#">
+                        <a data-downvote class="btn-vote__list__action" href="#">
                             <svg class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#down"></use>
                             </svg>
@@ -42,7 +48,7 @@ function template(name, image) {
                 </ul>
                 <ul class="btn-vote">
                     <li class="btn-vote__list">
-                        <a class="btn-vote__list__action" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a id="btn-comment" class="btn-vote__list__action" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <svg class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#comment"></use>
                             </svg>
@@ -96,7 +102,7 @@ function template(name, image) {
             </div>
         </div>
         <div class="collapse" id="collapseExample">
-            <textarea name="comment" placeholder="Write a comment..." rows="2" cols="50"></textarea>
+            <textarea data-comment name="comment" placeholder="Write a comment..." rows="2" cols="50"></textarea>
         </div>
     </div>
     `;

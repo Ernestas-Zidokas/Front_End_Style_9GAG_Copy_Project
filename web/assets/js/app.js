@@ -44,12 +44,55 @@ $(function() {
         $(this).siblings().removeClass('check-arrow');
     })
 
-    // $('body').on('click', '#nightmode', function(){
-    //     $(this).addClass('nightmode');
-    // })
-
     $('#nightmode').on('click', function(){
         $('body').toggleClass('nightmode');
+    })
+
+    $('body').on('click', '[data-upvote]', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('vote-active');
+        let dataPoints = $(this).closest('.post-afterbar').siblings('.post-meta').find('[data-points]')
+        // let dataDownVote = $(this).closest(this).find('[data-downvote]');
+        // let dataUpVote = $(this).closest('[data-upvote]');
+        // BLOGAI
+        // console.log(dataDownVote);
+        if($(this).hasClass('vote-active')){
+            let points = Number(dataPoints.text());
+            if($(dataDownVote).hasClass('vote-active')){
+                points+= 2;
+                $(dataDownVote).removeClass('vote-active');
+            } else {
+                points++;
+            }
+            $(dataPoints).text(points.toString());
+        } else {
+            let points = Number(dataPoints.text());
+            points--;
+            dataPoints.text(points.toString());
+        }
+    })
+
+    $('body').on('click', '[data-downvote]', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('vote-active');
+        let dataPoints = $(this).closest('.post-afterbar').siblings('.post-meta').find('[data-points]')
+        let dataDownVote = $(this).closest('[data-downvote]');
+        let dataUpVote = $(this).closest('[data-upvote]');
+
+        if($(dataDownVote).hasClass('vote-active')){
+            let points = Number(dataPoints.text());
+            if($(dataUpVote).hasClass('vote-active')){
+                points-= 2;
+                $(dataUpVote).removeClass('vote-active');
+            } else {
+                points--;
+            }
+            $(dataPoints).text(points.toString());
+        } else {
+            let points = Number(dataPoints.text());
+            points++;
+            dataPoints.text(points.toString());
+        }
     })
 })
 
