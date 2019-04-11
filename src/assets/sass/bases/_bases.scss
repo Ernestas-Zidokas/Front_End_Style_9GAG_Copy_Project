@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
         }
         &__lists {
             &__list {
+                &:hover {
+                    background-color: hsla(0,0%,100%,.1);
+                    cursor: pointer;
+                }
                 a {
                     span {
                         color: #fff;
@@ -77,6 +81,10 @@ h1, h2, h3, h4, h5, h6 {
                 a {
                     background-color: hsla(0,0%,100%,.2);
                     color: #fff;
+                    &:hover {
+                        background-color: hsla(0,0%,100%,.3);
+                        cursor: pointer;
+                    }
                 }
             }
             &__list {
@@ -90,6 +98,30 @@ h1, h2, h3, h4, h5, h6 {
                 .content__middle {
                     .post-afterbar {
                         border-bottom: 1px solid hsla(0,0%,100%,.2);
+                        .btn-vote__list {
+                            border-color: hsla(0,0%,100%,.3);
+                            &:hover {
+                                border-color: hsla(0,0%,100%,.2);
+                            }
+                            .dropdown-menu {
+                                background-color: #333;
+                                &__item {
+                                    p {
+                                        color: #fff;
+                                    }
+                                    &:hover {
+                                        background-color: hsla(0,0%,100%,.2);
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .collapse {
+                        input {
+                            background-color: #333;
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -97,6 +129,13 @@ h1, h2, h3, h4, h5, h6 {
         .right-bar {
             &__lists {
                 &__list {
+                    &:hover {
+                        a {
+                            h3 {
+                                color: #09f;
+                            }
+                        }
+                    }
                     a {
                         h3 {
                             color: #fff;
@@ -129,6 +168,28 @@ h1, h2, h3, h4, h5, h6 {
                 input {
                     caret-color: #fff;
                     background-color: #333333;
+                }
+            }
+        }
+    }
+    .modal-content {
+        background-color: #333;
+        .modal-header {
+            border-color: hsla(0,0%,100%,.2);
+            .close {
+                text-shadow: none;
+                color: #fff;
+            }
+        }
+        .modal-title {
+            color: #fff;
+        }
+        .modal-body {
+            &__input {
+                color: #fff;
+                input {
+                    background-color: #333;
+                    border-color: hsla(0,0%,100%,.2);
                 }
             }
         }

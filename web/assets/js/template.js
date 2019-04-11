@@ -8,10 +8,10 @@ function template(name, image) {
             </a>
         </div>
         <div class="middle-bar__list">
-          <a href="#">
-              <h1>${name}</h1>
-              <img src ="${image}">
-          </a>
+            <a href="#">
+                <h1>${name}</h1>
+                <img src ="${image}">
+            </a>
         </div>
         <div class="post-meta">
             <a href="#">
@@ -23,7 +23,7 @@ function template(name, image) {
             <div>·</div>
             <a href="#">
                 <p>
-                    <span id="comments">14</span>
+                    <span data-commentCount>14</span>
                     <span>comments</span>
                 </p>
             </a>
@@ -102,7 +102,7 @@ function template(name, image) {
             </div>
         </div>
         <div class="collapse" id="collapseExample">
-            <textarea data-comment name="comment" placeholder="Write a comment..." rows="2" cols="50"></textarea>
+            <input data-comment name="comment" placeholder="Write a comment...">
         </div>
     </div>
     `;

@@ -287,13 +287,14 @@
 .collapse, .collapsing {
     margin-top: -20px;
     margin-bottom: 20px;
-    textarea {
+    input {
         border-radius: 16px;
         border: 1px solid rgba(0,0,0,0.05);
         background: rgba(0,0,0,0.05);
         padding-left: 10px;
-        width: 486px;
+        width: 500px;
         outline: none;
+        padding: 10px;
     }
 }
 

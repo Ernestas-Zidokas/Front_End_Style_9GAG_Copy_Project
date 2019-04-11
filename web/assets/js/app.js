@@ -51,11 +51,10 @@ $(function() {
     $('body').on('click', '[data-upvote]', function(e) {
         e.preventDefault();
         $(this).toggleClass('vote-active');
+
         let dataPoints = $(this).closest('.post-afterbar').siblings('.post-meta').find('[data-points]')
-        // let dataDownVote = $(this).closest(this).find('[data-downvote]');
-        // let dataUpVote = $(this).closest('[data-upvote]');
-        // BLOGAI
-        // console.log(dataDownVote);
+        let dataDownVote = $(this).parent().siblings().find('[data-downvote]');
+
         if($(this).hasClass('vote-active')){
             let points = Number(dataPoints.text());
             if($(dataDownVote).hasClass('vote-active')){
@@ -75,11 +74,11 @@ $(function() {
     $('body').on('click', '[data-downvote]', function(e) {
         e.preventDefault();
         $(this).toggleClass('vote-active');
-        let dataPoints = $(this).closest('.post-afterbar').siblings('.post-meta').find('[data-points]')
-        let dataDownVote = $(this).closest('[data-downvote]');
-        let dataUpVote = $(this).closest('[data-upvote]');
 
-        if($(dataDownVote).hasClass('vote-active')){
+        let dataPoints = $(this).closest('.post-afterbar').siblings('.post-meta').find('[data-points]');
+        let dataUpVote = $(this).parent().siblings().find('[data-upvote]');
+
+        if($(this).hasClass('vote-active')){
             let points = Number(dataPoints.text());
             if($(dataUpVote).hasClass('vote-active')){
                 points-= 2;
@@ -94,6 +93,17 @@ $(function() {
             dataPoints.text(points.toString());
         }
     })
+
+    $('body').on('keypress', '[data-comment]', function (e) {
+        if (e.which == 13) {
+            $(this).val('');
+            let commentCount = $(this).parent().siblings('.post-meta').find('[data-commentCount]');
+            let points = Number(commentCount.text());
+            points ++;
+            commentCount.text(points.toString());
+        }
+    });
+
 })
 
 const content = document.querySelector('.middle-bar__content');
@@ -132,7 +142,6 @@ let pageCounter = 0;
 $(window).scroll(function() {
     if($(window).scrollTop() + $(window).height() == $(document).height()) {
         pageCounter++;
-        console.log(pageCounter);
 
         const content = document.querySelector('.middle-bar__content');
         const api_url = `https://rickandmortyapi.com/api/character/?page=${pageCounter}`;

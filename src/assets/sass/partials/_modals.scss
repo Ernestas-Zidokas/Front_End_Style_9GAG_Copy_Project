@@ -35,9 +35,15 @@
         }
         &--facebook {
             background-color: #4367b0;
+            &:hover {
+                background-color: #4d76c9;
+            }
         }
         &--google {
             background-color: #2d72d9;
+            &:hover {
+                background-color: #5795ff;
+            }
         }
     }
 }
@@ -78,6 +84,7 @@
             display: block;
             margin: 6px 0;
             width: 100%;
+            outline: none;
         }
     }
     &__bottom {
