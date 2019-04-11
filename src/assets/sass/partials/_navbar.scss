@@ -1,0 +1,107 @@
+.top-nav {
+    background-color: $navbar-color;
+    width: 100%;
+    z-index: 13;
+    position: fixed;
+    a {
+        text-decoration: none;
+    }
+    &__navbar {
+        max-width: 1196px;
+        margin: 0 auto;
+        position: relative;
+        &__lists {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            line-height: 48px;
+            &__list {
+                padding-right: 24px;
+                line-height: 48px;
+                font-size: 14px;
+                text-align: center;
+                &__logo {
+                    width: 72px;
+                    height: 48px;
+                }
+                a {
+                    color: $navbar-text-color;
+                }
+                a:hover {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+.function {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 48px;
+    &__general {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        &__list {
+            margin-right: 8px;
+            line-height: 48px;
+            font-size: 14px;
+            text-align: center;
+            color: $navbar-text-color;
+            &:first-child {
+                &:hover {
+                    a {
+                        svg {
+                            fill: #fc0;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                &:hover {
+                    a {
+                        svg {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+            .dropdown {
+                .dropdown-fix {
+                    .show {
+                        top: 15px !important;
+                        left: -30px !important;
+                    }
+                    .dropdown-menu {
+                        -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                                box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                                padding: 8px 12px;
+                                width: 200px;
+                                line-height: 20px;
+                        input {
+                            border: none;
+                            font-size: 14px;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+        .svg-icon {
+            width: 20px;
+            height: 20px;
+            fill: $navbar-text-color;
+            margin-right: 10px;
+        }
+
+    }
+    &__visitor {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        &__list {
+
+        }
+    }
+}

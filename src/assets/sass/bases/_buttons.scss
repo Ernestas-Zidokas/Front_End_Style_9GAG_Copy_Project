@@ -1,0 +1,28 @@
+.primary-btn {
+    color: #fff;
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 16px;
+    border-radius: $border-radius;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+    background-color: rgb(0, 153, 255);
+    &:hover {
+        background-color: #33adff;
+        color: #fff;
+    }
+}
+
+.mute-btn {
+    display: inline-block;
+    color: #bbb;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: $border-radius;
+}
+.mute-btn:hover {
+    color: $navbar-text-color;
+}

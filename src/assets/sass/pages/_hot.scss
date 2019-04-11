@@ -1,0 +1,322 @@
+.content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 50px;
+    margin-left: 224px;
+    height: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    .middle-bar {
+        overflow: scroll;
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        padding-top: 48px;
+        &__loading {
+            text-align: center;
+            @-webkit-keyframes svg-icon /* Safari and Chrome */ {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes svg-icon {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            .svg-icon {
+                -webkit-animation: svg-icon 2s linear infinite;
+                animation: svg-icon 2s linear infinite;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &__featured-tag {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+            a {
+                display: block;
+                height: 32px;
+                line-height: 32px;
+                margin-right: 8px;
+                margin-bottom: 8px;
+                background-color: $sidenav-hover-color;
+                color: $navbar-color;
+                text-decoration: none;
+                padding: 0 8px;
+                border-radius: 2px;
+                text-align: center;
+                &:hover {
+                    background-color: rgba(0,0,0,.1);
+                }
+            }
+        }
+        &__content {
+
+        }
+        &__list {
+            a {
+                text-decoration: none;
+                color: $navbar-color;
+                h1 {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                    &:hover {
+                        color: #09f
+                    }
+                }
+                img {
+                    width: 500px;
+                }
+            }
+        }
+    }
+    .right-bar {
+        width: 300px;
+        height: 3000px;
+        overflow: scroll;
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        padding-top: 48px;
+        &__lists {
+            &__list {
+                margin-bottom: 10px;
+                img {
+                    height: 158px;
+                    width: 300px;
+                }
+                h3 {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    word-wrap: break-word;
+                    color: $navbar-color;
+                }
+                a {
+                    text-decoration: none;
+                }
+                &:hover {
+                    h3 {
+                        color: #09f
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post-section {
+    display: inline-block;
+    a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-decoration: none;
+        margin-bottom: 8px;
+        img {
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            margin-right: 4px;
+        }
+        p {
+            color: $post-text-color;
+            font-size: 12px;
+            &:hover {
+                color: #666;
+            }
+        }
+    }
+}
+
+.post-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 12px 0;
+    a {
+        text-decoration: none;
+        color: $post-text-color;
+        &:hover {
+            p {
+                color: #666;
+            }
+        }
+    }
+    div {
+        color: $post-text-color;
+        margin: 0 4px;
+    }
+}
+
+.post-afterbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 500px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 20px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    .btn-left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        .btn-vote {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            &__list {
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                text-align: center;
+                margin-right: 8px;
+                &:hover {
+                    border-color: #999;
+                }
+                .dropdown-menu {
+                    min-width: 160px;
+                    &__item {
+                        text-decoration: none;
+                        p {
+                            color: $navbar-color;
+                            line-height: 34px;
+                            padding: 0 16px;
+                            font-size: 14px;
+                            &:hover {
+                                background-color: rgba(0,0,0,0.06);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                &__action {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    width: 44px;
+                    height: 34px;
+                    .svg-icon {
+                        height: 25px;
+                        width: 25px;
+                        fill: $post-text-color;
+                    }
+                    &.vote-active {
+                        background-color: rgba(0,0,0,.04);
+                        .svg-icon {
+                            fill: #0099ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-right {
+        ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        &__list {
+            font-weight: 700;
+            height: 34px;
+            line-height: 34px;
+            padding: 0 10px;
+            border-radius: 2px;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: #fff;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: #fff;
+                }
+            }
+            &--facebook {
+                background-color: #3b5998;
+                margin-right: 8px;
+                &:hover {
+                    background-color: #4c70ba;
+                    cursor: pointer;
+                }
+            }
+            &--pinterest {
+                background-color: #bd081c;
+                &:hover {
+                    background-color: #ee0a23;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+    }
+}
+
+.collapse, .collapsing {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    input {
+        border-radius: 16px;
+        border: 1px solid rgba(0,0,0,0.05);
+        background: rgba(0,0,0,0.05);
+        padding-left: 10px;
+        width: 500px;
+        outline: none;
+        padding: 10px;
+    }
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: 1px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 2px;
+    background: white;
+    svg {
+        height: 16px;
+        width: 20px;
+        fill: #999;
+    }
+}
+
+#myBtn:hover {
+    border-color: #aaa;
+}

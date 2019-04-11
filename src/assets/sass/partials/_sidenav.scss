@@ -1,0 +1,142 @@
+.side-menu {
+    position: fixed;
+    top: 50px;
+    height: 100%;
+    background: white;
+    width: 192px;
+    overflow: scroll;
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    padding: 24px 0 80px 0;
+    .footer {
+        padding-top: 12px;
+        &__list, a {
+            font-size: 12px;
+            line-height: 18px;
+            color: #999;
+            margin-bottom: 8px;
+            text-decoration: none;
+            a {
+                &:hover {
+                    color: #666;
+                }
+            }
+        }
+    }
+    &__lists {
+        &__list {
+            color: $navbar-color;
+            font-size: 14px;
+            height: 36px;
+            line-height: 36px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: relative;
+            border-radius: 2px;
+            -webkit-transition: background-color .15s,padding-right .15s;
+            transition: background-color .15s,padding-right .15s;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 8px;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            .dropdown {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                .dropdown-menu {
+                    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+                    &__item {
+                        position: relative;
+                        color: #000;
+                        line-height: 34px;
+                        padding: 0 16px 0 32px;
+                        font-size: 14px;
+                        text-decoration: none;
+                        font-weight: 400;
+                        &:hover {
+                            background-color: rgba(0,0,0,0.06);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            a {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                text-decoration: none;
+            }
+            span {
+                margin-left: 10px;
+                color: $navbar-color;
+            }
+            svg, img {
+                width: 24px;
+                height: 24px;
+            }
+            &.active {
+                background-color: $sidenav-active-color;
+                font-weight: bold;
+                .more-icon {
+                    fill: $sidenav-star-color;
+                }
+            }
+            .star-hover {
+                fill: #fff;
+            }
+            &:hover {
+                background-color: $sidenav-hover-color;
+                cursor: pointer;
+                .star-hover {
+                    fill: $sidenav-star-color;
+                }
+                .star {
+                    fill: $sidenav-star-active-color;
+                }
+            }
+            .star {
+                fill: $sidenav-star-active-color;
+                &:hover {
+                    fill: $sidenav-star-active-color;
+                }
+            }
+        }
+        &__title h3 {
+            line-height: 16px;
+            height: 16px;
+            margin-bottom: 8px;
+            color: #999;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        &__title {
+            .title-hide {
+                display: none;
+            }
+        }
+        .sections {
+            .side-menu__lists__list {
+                &:last-child {
+                    &:hover {
+
+                    }
+                }
+            }
+        }
+    }
+}
+.popular {
+    padding-bottom: 12px;
+}

@@ -1,0 +1,197 @@
+@import 'variables.scss';
+@import 'icons.scss';
+@import 'layout.scss';
+@import 'utils.scss';
+@import 'buttons.scss';
+
+body {
+    margin: 0;
+    font: 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,Helvetica,Geneva,sans-serif
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: bold;
+}
+.col-lg-3, .col-lg-9 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.nightmode {
+    background-color: $navbar-color;
+    .side-menu {
+        background-color: $navbar-color;
+        .popular {
+            .active {
+                background-color: #333333;
+                .dropdown .dropdown-menu{
+                    background: #333333;
+                }
+                .dropdown {
+                    .dropdown-menu {
+                        background-color: #333333;
+                        &__item {
+                            &:hover {
+                                background-color: #333333;
+                            }
+                            p {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            li > {
+                a > {
+                    svg {
+                        &:not(.more-icon){
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &__lists {
+            &__list {
+                &:hover {
+                    background-color: hsla(0,0%,100%,.1);
+                    cursor: pointer;
+                }
+                a {
+                    span {
+                        color: #fff;
+                    }
+                }
+                .svg-icon {
+                    fill: $navbar-color;
+                }
+            }
+        }
+    }
+    .middle-content {
+        .middle-bar {
+            &__featured-tag {
+                a {
+                    background-color: hsla(0,0%,100%,.2);
+                    color: #fff;
+                    &:hover {
+                        background-color: hsla(0,0%,100%,.3);
+                        cursor: pointer;
+                    }
+                }
+            }
+            &__list {
+                a {
+                    h1 {
+                        color: #fff;
+                    }
+                }
+            }
+            &__content {
+                .content__middle {
+                    .post-afterbar {
+                        border-bottom: 1px solid hsla(0,0%,100%,.2);
+                        .btn-vote__list {
+                            border-color: hsla(0,0%,100%,.3);
+                            &:hover {
+                                border-color: hsla(0,0%,100%,.2);
+                            }
+                            .dropdown-menu {
+                                background-color: #333;
+                                &__item {
+                                    p {
+                                        color: #fff;
+                                    }
+                                    &:hover {
+                                        background-color: hsla(0,0%,100%,.2);
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .collapse {
+                        input {
+                            background-color: #333;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .right-bar {
+            &__lists {
+                &__list {
+                    &:hover {
+                        a {
+                            h3 {
+                                color: #09f;
+                            }
+                        }
+                    }
+                    a {
+                        h3 {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #nightmode {
+        fill: #fc0;
+    }
+    #myBtn {
+        background-color: #333;
+        border-color: hsla(0,0%,100%,.2);
+    }
+    #favourite {
+        .side-menu__lists__list {
+            a {
+                svg {
+                    fill: #fbc709;
+                }
+            }
+        }
+    }
+    .function__general__list {
+        .dropdown {
+            .dropdown-menu {
+                background-color: #333333;
+                input {
+                    caret-color: #fff;
+                    background-color: #333333;
+                }
+            }
+        }
+    }
+    .modal-content {
+        background-color: #333;
+        .modal-header {
+            border-color: hsla(0,0%,100%,.2);
+            .close {
+                text-shadow: none;
+                color: #fff;
+            }
+        }
+        .modal-title {
+            color: #fff;
+        }
+        .modal-body {
+            &__input {
+                color: #fff;
+                input {
+                    background-color: #333;
+                    border-color: hsla(0,0%,100%,.2);
+                }
+            }
+        }
+    }
+}

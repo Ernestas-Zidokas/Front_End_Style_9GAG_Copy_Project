@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/css/app.css">
+        <title>9GAG project</title>
+    </head>
+    <body>
+        {{>navbar}}
+        <div class="base-container">
+            {{>sidenav}}
+            {{body}}
+        </div>
+        {{>modals}}
+        <!-- {{#is basename 'index'}}
+        {{>footer}}
+        {{/is}} -->
+        <div class="svg-sprite-container">{{> 'sprite.symbol' }}</div>
+
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/template.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+
+    </body>
+</html>
